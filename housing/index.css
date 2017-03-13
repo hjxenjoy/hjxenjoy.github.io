@@ -1,0 +1,231 @@
+@charset "utf8";
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: url(https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg) no-repeat 50% 50% / cover;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  float: right;
+  margin-right: 100px;
+  width: 900px;
+  height: 100%;
+  padding: 20px 40px 0;
+  background-color: #f8f8f8;
+}
+
+.left {
+  float: left;
+  width: 500px;
+}
+
+.right {
+  position: relative;
+  float: right;
+  width: 280px;
+  height: 100%;
+  padding: 120px 0 0;
+}
+
+header {
+  padding-bottom: 20px;
+  color: #a99c89;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-bottom: 1px solid #efefef;
+}
+
+.home-link {
+  float: left;
+  letter-spacing: 2px;
+  line-height: 1.4;
+}
+
+.menu {
+  float: right;
+  margin: 30px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+}
+
+.menu li {
+  float: left;
+  padding: 0 15px;
+}
+
+h1 {
+  margin: 80px 0 50px;
+  position: relative;
+  color: #c37e64;
+  font-size: 40px;
+  font-weight: 300;
+  font-family: Times;
+  line-height: 1.2;
+}
+
+h1 em {
+  position: absolute;
+  top: 4px;
+  font-size: 12px;
+  font-style: normal;
+  font-family: 'Roboto', sans-serif;
+  color: #999;
+  text-transform: uppercase;
+}
+
+.popularize {
+  color: #bd9b8e;
+  line-height: 1.4;
+  font-family: Times;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.line {
+  margin-bottom: 50px;
+  width: 60px;
+  height: 4px;
+  background-color: #fdd179;
+}
+
+.subscribe {
+  margin: 50px 0 0 -120px;
+  width: 600px;
+  height: 120px;
+  padding: 28px 0 28px 120px;
+  background-color: #53cdc0;
+  background-image: linear-gradient(to right, #4dc0b3, #53cdc0 75%,#e05a5b 75%,  #bc4b4a);
+  font-size: 0;
+}
+
+.subscribe input[type="email"] {
+  width: 300px;
+  height: 64px;
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  padding: 0 25px;
+  border: 0 none;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.subscribe input[type="submit"] {
+  border: 0 none;
+  width: 150px;
+  height: 64px;
+  background-color: #ffc34b;
+  color: #fff;
+  font-size: 16px;
+  font-family: Times;
+  vertical-align: middle;
+}
+
+.help {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  color: #b6a37e;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.right::before {
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 22px;
+  top: 50px;
+  left: 50%;
+  margin-left: -11px;
+  border: 2px solid #e2e3e4;
+  border-radius: 50%;
+}
+
+.right::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  top: 70px;
+  left: 50%;
+  bottom: 0;
+  margin-left: -1px;
+  background-color: #e2e3e4;
+}
+
+.hotels {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hotel-item {
+  padding-bottom: 30px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.hotel-cover {
+  height: 180px;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.hotel-item h3 {
+  margin: 20px 0 0;
+  color: #1f9399;
+}
+
+.hotel-item p {
+  margin: 12px 0 20px;
+  font-style: italic;
+  color: #cbd5d5;
+}
+
+.price {
+  color: #46c9b9;
+  font-size: 18px;
+}
+
+.dollar::before {
+  content: "$";
+  font-size: 20px;
+}
+
+.price::after {
+  margin-left: 5px;
+  content: "/ night";
+  font-size: 12px;
+  font-style: italic;
+}
+
+.schedule-btn {
+  margin-top: 20px;
+  border: 3px solid #86efe3;
+  color: #86efe3;
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 68px;
+  background-color: #fff;
+}
