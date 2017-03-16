@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Todo List</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body v-cloak>
+  <svg xmlns="http://www.w3.org/2000/svg" style="width:0;height:0;visibility:hidden;">
+    <symbol viewBox="0 0 1024 1024" id="icon-check">
+      <title>icon-check</title>
+      <path d="M966.843744 202.673979c0 0-136.074142 47.009663-290.38667 221.352387-145.636938 164.54252-178.798199 229.896994-237.411131 318.278927 0 0-86.059028-163.221432-310.11192-283.405675l115.28977-110.273523c0 0 108.763123 75.400271 181.466981 206.718085 0 0 185.478342-287.852964 541.15297-424.348708L966.843744 202.673979 966.843744 202.673979M966.843744 202.673979 966.843744 202.673979z"></path>
+    </symbol>
+    <symbol viewBox="0 0 1024 1024" id="icon-done">
+      <title>icon-done</title>
+      <path d="M340.726154 902.706528 64 605.210947 137.127384 526.622316 342.862769 747.863578 892.214157 192 963.067078 272.96 340.726154 902.706528Z"></path>
+    </symbol>
+    <symbol viewBox="0 0 1024 1024" id="icon-star">
+      <title>icon-star</title>
+      <path d="M1020.192 401.824c-8.864-25.568-31.616-44.288-59.008-48.352l-266.432-39.616-115.808-240.448c-12.192-25.248-38.272-41.408-66.944-41.408s-54.752 16.16-66.944 41.408l-115.808 240.448-266.464 39.616c-27.36 4.064-50.112 22.784-58.944 48.352-8.8 25.632-2.144 53.856 17.184 73.12l195.264 194.944-45.28 270.432c-4.608 27.232 7.2 54.56 30.336 70.496 12.704 8.736 27.648 13.184 42.592 13.184 12.288 0 24.608-3.008 35.776-8.992l232.288-125.056 232.32 125.056c11.168 5.984 23.488 8.992 35.744 8.992 14.944 0 29.888-4.448 42.624-13.184 23.136-15.936 34.88-43.264 30.304-70.496l-45.312-270.432 195.328-194.944c19.296-19.296 25.92-47.52 17.184-73.12zM754.816 619.616c-16.384 16.32-23.808 39.328-20.064 61.888l45.312 270.432-232.32-124.992c-11.136-6.016-23.424-8.992-35.776-8.992-12.288 0-24.608 3.008-35.744 8.992l-232.32 124.992 45.312-270.432c3.776-22.56-3.648-45.568-20.032-61.888l-195.264-194.944 266.432-39.68c24.352-3.616 45.312-18.848 55.776-40.576l115.872-240.384 115.84 240.416c10.496 21.728 31.424 36.928 55.744 40.576l266.496 39.68-195.264 194.912z"></path>
+    </symbol>
+    <symbol viewBox="0 0 1024 1024" id="icon-star-full">
+      <title>icon-star-full</title>
+      <path d="M957.248 410.688c-6.528-20.032-23.744-34.688-44.48-38.016l-236.8-37.376L562.624 96C553.344 76.48 533.632 64 512 64S470.656 76.48 461.376 96L348.032 335.296l-236.8 37.376C90.496 376 73.28 390.656 66.752 410.688 64.896 416.32 64 422.208 64 428.032 64 442.624 69.76 456.96 80.384 467.584l174.784 174.784-50.112 250.624c-4.288 21.376 4.288 43.392 21.888 56.256C236.736 956.352 248.32 960 259.968 960c9.344 0 18.688-2.304 27.2-7.04L512 828.096l224.832 124.8c8.512 4.736 17.792 7.04 27.2 7.04 11.648 0 23.232-3.648 33.024-10.752 17.6-12.864 26.176-34.88 21.888-56.256l-50.048-250.624 174.784-174.784C954.24 456.96 960 442.624 960 428.032 960 422.208 959.104 416.32 957.248 410.688z"></path>
+    </symbol>
+    <symbol viewBox="0 0 1024 1024" id="icon-edit">
+      <title>icon-edit</title>
+      <path d="M936.797 234.279l-147.056-147.139c-15.838-15.878-41.614-15.878-57.461 0l-578.167 578.243c-2.494 2.656-4.398 6.114-5.463 9.633l-72.403 242.226c-2.563 8.735-0.221 17.982 6.114 24.337 6.333 6.302 15.655 8.735 24.235 6.183l242.38-72.365c3.551-1.105 6.833-3.059 9.578-5.651l0.005 0.062 0.688-0.621 19.348-19.407 558.15-558.127c15.838-15.801 15.838-41.554 0-57.376zM136.019 887.956l55.363-185.324 130.027 129.985-185.391 55.343zM361.42 798.016l-135.474-135.417 450.067-450.105 135.474 135.515-450.067 450.002zM845.995 313.345l-135.474-135.417 50.503-50.537 135.474 135.515-50.503 50.442z"></path>
+    </symbol>
+    <symbol viewBox="0 0 1024 1024" id="icon-delete">
+      <title>icon-delete</title>
+      <path d="M608 768c-17.696 0-32-14.304-32-32L576 384c0-17.696 14.304-32 32-32s32 14.304 32 32l0 352C640 753.696 625.696 768 608 768zM416 768c-17.696 0-32-14.304-32-32L384 384c0-17.696 14.304-32 32-32s32 14.304 32 32l0 352C448 753.696 433.696 768 416 768zM928 224l-160 0L768 160c0-52.928-42.72-96-95.264-96L352 64C299.072 64 256 107.072 256 160l0 64L96 224C78.304 224 64 238.304 64 256s14.304 32 32 32l832 0c17.696 0 32-14.304 32-32S945.696 224 928 224zM320 160c0-17.632 14.368-32 32-32l320.736 0C690.272 128 704 142.048 704 160l0 64L320 224 320 160zM736.128 960 288.064 960c-52.928 0-96-43.072-96-96L192.064 383.52c0-17.664 14.336-32 32-32s32 14.336 32 32L256.064 864c0 17.664 14.368 32 32 32l448.064 0c17.664 0 32-14.336 32-32L768.128 384.832c0-17.664 14.304-32 32-32s32 14.336 32 32L832.128 864C832.128 916.928 789.056 960 736.128 960z"></path>
+    </symbol>
+  </svg>
+
+  <div class="container">
+    <div class="header">
+      <svg>
+        <use xlink:href="#icon-check"></use>
+      </svg>
+    </div>
+    <div class="body">
+      <form :class="{'has-value': name}" @submit.prevent="addTask">
+        <input type="text" v-model="name" class="task-create">
+      </form>
+
+      <ul class="task-list">
+        <li class="task-item" v-for="(index, item) in list" v-if="scope == 0 || (scope == 1 && item.isDone) || (scope == 2 && !item.isDone) || (scope == 3 && item.stared)">
+          <div class="operate">
+            <span @click="toggleStar(item)" v-if="item.stared" class="svg-icon star"><svg><use xlink:href="#icon-star-full"></svg></span>
+            <span @click="toggleStar(item)" v-else class="svg-icon star"><svg><use xlink:href="#icon-star"></svg></span>
+            <span @click="removeTask(item)" class="svg-icon delete"><svg><use xlink:href="#icon-delete"></svg></span>
+            <span @click="toggleDone(item)" class="svg-icon put-done"><svg><use xlink:href="#icon-done"></svg></span>
+          </div>
+          <div v-if="editing == index" class="edit-box">
+            <input type="text" class="task-edit" 
+              :id="'edit-text-00' + index"
+              v-model="editName" @keyup.enter="updateTask" @blur="updateTask">
+          </div>
+          <div v-else @dblclick="editTask(index)" class="text" :class="{done: item.isDone}">{{item.name}}</div>
+        </li>
+      </ul>
+    </div>
+    <div class="footer">
+      <span :class="{active: scope == 0}" 
+        @click="scope=0"
+        class="state-item state-all">All</span>
+      <span :class="{active: scope == 1}" 
+        @click="scope=1"
+        class="state-item state-done">Done</span>
+      <span :class="{active: scope == 2}" 
+        @click="scope=2"
+        class="state-item state-todo">Todo<span class="sub">{{list.length - dones}}</span></span>
+      <span :class="{active: scope == 3}" 
+        @click="scope=3"
+        class="state-item state-star">Star</span>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js"></script>
+  <script>
+    new Vue({
+      el: document.body,
+      data: {
+        showList: [],
+        scope: 0,
+        name: '',
+        editing: -1,
+        editName: '',
+        list: [{
+          name: 'Lorem ipsum dolor.',
+          stared: false,
+          isDone: false
+        }, {
+          name: 'Amet, soluta, beatae.',
+          stared: false,
+          isDone: false
+        }, {
+          name: 'Delectus, ullam, architecto.',
+          stared: false,
+          isDone: false
+        }, {
+          name: 'Nostrum ad, itaque!',
+          stared: false,
+          isDone: false
+        }, {
+          name: 'Maiores inventore, consequuntur!',
+          stared: false,
+          isDone: false
+        }, {
+          name: 'Animi, quam, optio.',
+          stared: false,
+          isDone: false
+        }, {
+          name: 'Amet, quas, iure.',
+          stared: false,
+          isDone: false
+        }, {
+          name: 'Eveniet, voluptates, facilis.',
+          stared: false,
+          isDone: false
+        }, {
+          name: 'Inventore, recusandae eum?',
+          stared: false,
+          isDone: false
+        }, {
+          name: 'Debitis, obcaecati, necessitatibus?',
+          stared: false,
+          isDone: false
+        }, {
+          name: 'Fuga, explicabo dolor.',
+          stared: false,
+          isDone: false
+        }, {
+          name: 'Accusantium, similique aspernatur?',
+          stared: false,
+          isDone: false
+        }, {
+          name: 'Accusamus unde, vel.',
+          stared: false,
+          isDone: false
+        }, {
+          name: 'Nesciunt, omnis perspiciatis.',
+          stared: false,
+          isDone: false
+        }, {
+          name: 'Numquam, odio, ea!',
+          stared: false,
+          isDone: false
+        }, {
+          name: 'Quam, quos, numquam.',
+          stared: false,
+          isDone: false
+        }, {
+          name: 'Hic, sunt, tempore.',
+          stared: false,
+          isDone: false
+        }, {
+          name: 'Inventore, qui, quas.',
+          stared: false,
+          isDone: false
+        }, {
+          name: 'Maiores, itaque, reiciendis!',
+          stared: false,
+          isDone: false
+        }, {
+          name: 'Dolores magnam, dolore.',
+          stared: false,
+          isDone: false
+        }]
+      },
+      computed: {
+        dones: function () {
+          var count = 0;
+          this.list.forEach(function (item) {
+            count += !!item.isDone;
+          });
+          return count;
+        }
+      },
+      methods: {
+        toggleStar: function (item) {
+          item.stared = !item.stared;
+        },
+        toggleDone: function (item) {
+          item.isDone = !item.isDone;
+        },
+        editTask: function (index) {
+          this.editName = this.list[index].name;
+          this.editing = index;
+          setTimeout(function () {
+            document.getElementById('edit-text-00' + index).select();
+          }, 50)
+        },
+        addTask: function () {
+          if (!this.name) {
+            return false;
+          }
+          this.list = [{
+            name: this.name,
+            stared: false,
+            isDone: false
+          }].concat(this.list);
+          this.name = '';
+        },
+        updateTask: function () {
+          var item = this.list[this.editing];
+          if (!this.editName) {
+            this.editName = '';
+            this.editing = -1;
+            return false;
+          }
+          item.name = this.editName;
+          this.list.$set(this.editing, item);
+          this.editing = -1;
+          this.editName = '';
+        },
+        removeTask: function (item) {
+          this.list.$remove(item);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
