@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gradient</title>
+  <style>
+    body {
+      --line-color: #99deee;
+      margin: 0;
+      background-image: linear-gradient(#fff, #fff 50px, var(--line-color) 50px, var(--line-color) 51px, #fff 51px, #fff 52px, var(--line-color) 52px, var(--line-color) 53px);
+      background-size: 100% 53px;
+      background-repeat: repeat-y;
+      background-position: 0 100px;
+    }
+    body::before {
+      position: relative;
+      z-index: 2;
+      content: "Note Book";
+      display: block;
+      height: 53px;
+      color: #fff;
+      font-family: Times;
+      line-height: 53px;
+      text-align: center;
+      font-size: 2em;
+      letter-spacing: 1px;
+      background: #099 linear-gradient(rgba(0, 0, 0, .05), rgba(0, 0, 0, .2));
+    }
+    body::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: 
+        /*radial-gradient(20px 20px, transparent 0%, transparent 49%, #099 49%, #099 52%, transparent 52%),*/
+        radial-gradient(30px 20px, transparent 0%, transparent 49%, #099 49%, #099 52%, transparent 52%),
+        radial-gradient(20px 30px, transparent 0%, transparent 49%, #099 49%, #099 52%, transparent 52%);
+      background-position: 0 48px;
+      background-size: 53px 53px;
+      background-repeat: repeat-y;
+    }
+  </style>
+</head>
+<body>
+</body>
+</html>
