@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chicken</title>
+  <style>
+    *, *::before, *::after {box-sizing: border-box;}
+    html {height: 100%;}
+    body {
+      margin: 0;
+      height: 100%;
+      background: linear-gradient(to bottom, #d4091b 60%, #fc3d27);
+    }
+    .chicken {
+      margin: 0 auto;
+      width: 500px;
+      padding: 100px 0;
+    }
+    .body {
+      position: relative;
+      width: 210px;
+      height: 280px;
+      margin: 0 auto;
+    }
+
+    .inner {
+      position: relative;
+      z-index: 10;
+      height: 280px;
+      background-color: #fee759;
+      background-image: radial-gradient(transparent 40%, #fdab2b);
+      border-radius: 50%;
+      box-shadow: 0 0 2px 2px #fee759;
+    }
+
+    .body::before {
+      content: "";
+      position: absolute;
+      z-index: 9;
+      top: 90px;
+      left: -40px;
+      width: 100px;
+      height: 40px;
+      background-color: #fee759;
+      background-image: radial-gradient(#fee759, #fdab2b);
+      border-radius: 90px 0 0 5px / 40px 0 0 5px;
+      box-shadow: 0 0 1px 1px #fee759;
+    }
+
+    .body::after {
+      content: "";
+      position: absolute;
+      z-index: 9;
+      top: 90px;
+      right: -40px;
+      width: 100px;
+      height: 40px;
+      background-color: #fee759;
+      background-image: radial-gradient(#fee759, #fdab2b);
+      border-radius: 0 90px 0 5px / 0 40px 0 5px;
+      box-shadow: 0 0 1px 1px #fee759;
+    }
+
+    .inner::before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -22px;
+      content: "";
+      width: 44px;
+      height: 56px;
+      background: transparent;
+      border-radius: 50%;
+      box-shadow: -45px 50px 0 #fff7e7, 
+                  -45px 50px 1px 1px #fece38,
+                  45px 50px 0 #fff7e7,
+                  45px 50px 1px 1px #fece38;
+    }
+    .inner::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -15px;
+      width: 30px;
+      height: 10px;
+      background-color: transparent;
+      border-radius: 50%;
+      box-shadow: -50px 120px 10px #fda04e, 50px 120px 10px #fda04e;
+    }
+    .eye::before {
+      content: "";
+      position: absolute;
+      z-index: 11;
+      top: 65px;
+      left: 45px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 70% 50%, #fff 20%, #de525d 20%, #8e2a30);
+    }
+    .eye::after {
+      content: "";
+      position: absolute;
+      z-index: 11;
+      top: 65px;
+      right: 45px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 70% 50%, #fff 20%, #de525d 20%, #8e2a30);
+    }
+    .outer {
+      position: relative;
+      z-index: 11;
+      margin: -140px auto 0;
+      width: 256px;
+      height: 160px;
+      background-color: #fff7da;
+      background-image: radial-gradient(transparent 30%, #fad5b0);
+      border-radius: 0 0 160px 160px;
+      box-shadow: 0 3px 2px #fff7da;
+    }
+    .beak {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 90px;
+      left: 50%;
+      z-index: 12;
+      margin-left: -15px;
+    }
+    .beak::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 15px solid transparent;
+      border-bottom-width: 0;
+      border-top-width: 30px;
+      border-top-color: #fd9d29;
+      border-radius: 5px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="chicken">
+    <div class="body">
+      <div class="inner"></div>
+      <div class="eye"></div>
+      <div class="beak"></div>
+    </div>
+    <div class="outer"></div>
+  </div>
+</body>
+</html>
