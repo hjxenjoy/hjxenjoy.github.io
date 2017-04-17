@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: none;
+}
+
+a, a:focus, a:active {
+  color: #818181;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  font: 14px / 1.42858 Roboto, sans-serif;
+  background-color: #f9f9f9;
+  color: #818181;
+}
+
+/* utils -- start */
+.unstyled {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.clearfix::before, .clearfix::after {
+  display: table;
+  height: 0;
+  content: "";
+}
+.clearfix::after {
+  clear: both;
+}
+/* utils -- end */
+
+/* header -- start */
+.header {
+  margin-bottom: 20px;
+  height: 80px;
+  padding: 15px 30px; 
+  background-color: #fff;
+}
+
+.home {
+  float: left;
+  margin: 0;
+  font-weight: normal;
+  font-size: 1em;
+  text-transform: uppercase;
+  line-height: 50px;
+}
+
+.home a {
+  color: #da352f;
+}
+
+.operator {
+  float: right;
+}
+
+.dropdown-menu {
+  font-size: 2em;
+  line-height: 50px;
+  cursor: pointer;
+}
+/* header -- end */
+
+/* aside -- start */
+.aside {
+  float: left;
+  width: 240px;
+  padding-bottom: 50px;
+  background-color: #fff;
+}
+
+.menu {
+  padding: 15px 0;
+}
+
+.menu a {
+  display: block;
+  padding: 0 20px;
+  border-left: 4px solid transparent;
+  line-height: 40px;
+}
+
+.menu .fa {
+  margin-right: 15px;
+}
+
+.menu a:hover {
+  background-color: #f3f3f3;
+}
+
+.menu a.active {
+  border-left-color: #da352f;
+  background-color: #f3f3f3;
+}
+
+.money-container {
+  padding: 10px;
+}
+.money-item {
+  height: 260px;
+  border: 1px dashed #999;
+  background-color: #f3f3f3;
+}
+/* aside -- end */
+
