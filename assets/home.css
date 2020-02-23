@@ -25,14 +25,15 @@ body {
   color: #bbe6fd;
   background: #01293e none no-repeat center / cover;
   background-attachment: fixed;
-  background-image: url(https://images.unsplash.com/photo-1553557353-377c7e82f449?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1125&q=80);
+  /* background-image: url(https://images.unsplash.com/photo-1553557353-377c7e82f449?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1125&q=80); */
 }
-
+/* 
 @media (min-width: 1000px) {
   body {
     background-image: url(https://images.unsplash.com/photo-1553557353-377c7e82f449?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80);
   }
 }
+ */
 
 .home-page {
   max-width: 90%;
